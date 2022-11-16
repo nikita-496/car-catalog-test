@@ -47,6 +47,10 @@
 
 <script>
 export default {
-  name: 'NuxtTutorial'
+  name: 'NuxtTutorial',
+  async mounted() {
+    const { data } = await this.$getMakes()
+    console.log(data.data)
+  }
 }
 </script>
